@@ -1,0 +1,158 @@
+:root {
+    --main-color:#fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    /* background-color: green; */
+    height: 1000px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Header */
+Header {
+    background-color: aqua;
+    padding: .8rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+Header .container {
+    /* background-color: violet; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+Header .container .logo-box {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+
+/* logo */
+/* Header .container .logo-box .logo {
+    background-color: blueviolet;
+} */
+
+Header .container .logo-box .logo h2 {
+    /* background-color: brown; */
+    margin: 0;
+}
+
+/* burgerBTN */
+Header .container .logo-box .burgerBTN {
+    /* background-color: red; */
+    width: 38px;
+    padding: .6rem .2rem;
+    cursor: pointer;
+    display: none;
+}
+
+Header .container .logo-box .burgerBTN span {
+    display: block;
+    background-color: #000;
+    height: 3px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+Header .container .logo-box .burgerBTN span:last-child {
+    margin-bottom: 0px;
+}
+
+
+/* Links */
+Header .container .ul-Links {
+    width: 70%;
+    /* background-color: green; */
+}
+
+Header .container .ul-Links ul {
+    justify-content: flex-end;
+}
+
+Header .container .ul-Links ul li {
+    /* background-color: teal; */
+    margin-right: .5rem;    
+}
+
+Header .container .ul-Links ul li:last-child {
+    margin-right: 0rem;
+}
+
+Header .container .ul-Links ul li a {
+    display: block;
+    /* background-color: yellowgreen; */
+    padding: .4rem 1.5rem;
+    color: #000;
+    text-decoration: none;
+}
+
+Header .container .ul-Links ul li a:hover {
+    color: #fff;
+}
+
+
+/* Media */
+@media screen and (max-width: 991px) {
+    Header .container .logo-box {
+        width: 28%;
+    }
+    Header .container .logo-box h2 {
+        font-size: 29px;
+    }
+    Header .container .ul-Links {
+        width: 72%;
+    }
+    Header .container .ul-Links ul li a {
+        /* background-color: red; */
+        padding: .4rem 1rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    Header .container .logo-box .burgerBTN {
+        display: block;
+    }
+    Header .container .ul-Links {
+        display: none;
+    }
+    Header .container .logo-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 271px) {
+    Header .container .logo-box {
+        flex-direction: column;
+    }
+    Header .container .logo-box .logo {
+        /* background-color: rosybrown; */
+        width: 100%;
+        text-align: center;
+        margin-bottom: .4rem;
+    }
+    Header .container .logo-box .burgerBTN {
+        margin-left: auto;
+    }
+}
