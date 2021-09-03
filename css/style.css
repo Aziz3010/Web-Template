@@ -1,5 +1,10 @@
 :root {
-    --main-color:#fff;
+    --main-color:#ff9800;
+    --First-color:#ff9800;
+    --second-color:#e91e63;
+    --third-color:#009688;
+    --fourth-color:#03a9f4;
+    --fifth-color:#4caf50;
 }
 
 * {
@@ -8,12 +13,12 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    /* background-color: green; */
-    height: 1000px;
-}
+/* body {
+    background-color: green;
+} */
 
 ul {
     list-style: none;
@@ -25,42 +30,36 @@ ul {
 
 /* Header */
 Header {
-    background-color: aqua;
+    background-color: rgba(255,255,255,.2);
     padding: .8rem 0;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 Header .container {
-    /* background-color: violet; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 Header .container .logo-box {
-    /* background-color: yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 30%;
 }
 
-
 /* logo */
-/* Header .container .logo-box .logo {
-    background-color: blueviolet;
-} */
-
 Header .container .logo-box .logo h2 {
-    /* background-color: brown; */
+    color: #fff;
     margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 /* burgerBTN */
 Header .container .logo-box .burgerBTN {
-    /* background-color: red; */
     width: 38px;
     padding: .6rem .2rem;
     cursor: pointer;
@@ -68,8 +67,8 @@ Header .container .logo-box .burgerBTN {
 }
 
 Header .container .logo-box .burgerBTN span {
+    background-color: #fff;
     display: block;
-    background-color: #000;
     height: 3px;
     margin-bottom: 5px;
     border-radius: 8px;
@@ -79,11 +78,9 @@ Header .container .logo-box .burgerBTN span:last-child {
     margin-bottom: 0px;
 }
 
-
 /* Links */
 Header .container .ul-Links {
     width: 70%;
-    /* background-color: green; */
 }
 
 Header .container .ul-Links ul {
@@ -91,7 +88,6 @@ Header .container .ul-Links ul {
 }
 
 Header .container .ul-Links ul li {
-    /* background-color: teal; */
     margin-right: .5rem;    
 }
 
@@ -101,53 +97,69 @@ Header .container .ul-Links ul li:last-child {
 
 Header .container .ul-Links ul li a {
     display: block;
-    /* background-color: yellowgreen; */
-    padding: .4rem 1.5rem;
-    color: #000;
-    text-decoration: none;
-}
-
-Header .container .ul-Links ul li a:hover {
     color: #fff;
+    padding: .4rem .8rem;
+    text-decoration: none;
+    transition: color 500ms;
+    text-transform: uppercase;
 }
 
+Header .container .ul-Links ul li a:hover,
+Header .container .ul-Links ul li a.actv {
+    color: var(--main-color);
+}
 
 /* Media */
 @media screen and (max-width: 991px) {
     Header .container .logo-box {
-        width: 28%;
+        width: 33%;
     }
     Header .container .logo-box h2 {
-        font-size: 29px;
+        font-size: 2rem;
     }
     Header .container .ul-Links {
-        width: 72%;
+        width: 67%;
     }
     Header .container .ul-Links ul li a {
         /* background-color: red; */
-        padding: .4rem 1rem;
+        padding: .4rem .4rem;
     }
-
 }
 
 @media screen and (max-width: 767px) {
+    Header .container {
+        flex-direction: column;
+    }
     Header .container .logo-box .burgerBTN {
         display: block;
     }
     Header .container .ul-Links {
         display: none;
+        width: 100%;
+        margin-top: .8rem;
     }
     Header .container .logo-box {
         width: 100%;
     }
+    Header .container .ul-Links ul {
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width: 271px) {
+@media screen and (max-width: 476px) {
+    Header .container .ul-Links ul {
+        flex-direction: column;
+    }
+    Header .container .ul-Links ul li {
+        margin: 0 0 .3rem 0;
+    }
+}
+
+@media screen and (max-width: 295px) {
     Header .container .logo-box {
         flex-direction: column;
     }
     Header .container .logo-box .logo {
-        /* background-color: rosybrown; */
         width: 100%;
         text-align: center;
         margin-bottom: .4rem;
@@ -155,4 +167,147 @@ Header .container .ul-Links ul li a:hover {
     Header .container .logo-box .burgerBTN {
         margin-left: auto;
     }
+}
+
+/* Landing-Page */
+.Landing-Page {
+    background-image: url(../img/background-1.jpg);
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: background-image 700ms;
+}
+
+.Landing-Page::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(.0,.0,.0,.8);
+    z-index: 2;
+}
+
+.Landing-Page .textBox {
+    text-align: center;
+    padding: 0 1rem;
+    color: #fff;
+    z-index: 3;
+}
+
+.Landing-Page .textBox h1 {
+    margin: 0 0 .5rem 0;
+    font-weight: 600;
+}
+
+.Landing-Page .textBox h1 span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.Landing-Page .textBox p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* setting box */
+.setting-box {
+    background-color: rgba(255,255,255,.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: fit-content;
+    margin-top: 64px;
+    z-index: 1999;
+}
+
+.setting-box .setting-options {
+    height: 100vh;
+    padding: 2rem .7rem;
+    position: relative;
+}
+
+.setting-box .setIconBox {
+    background-color: rgba(255,255,255,.2);
+    position: absolute;
+    right: -34px;
+    top: 35%;
+    padding: 8px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting-box .setIconBox .settingIcon {
+    font-size: 18px;
+    color: #fff;
+}
+
+@media screen and (max-width: 350px) {
+    .setting-box {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 295px) {
+    .setting-box {
+        margin-top: 108px;
+    }
+}
+
+/* option-box */
+.setting-box .option-box h4 {
+    margin: 0 0 .5rem 0;
+    padding-left: 8px;
+    color: #fff;
+}
+
+.setting-box .option-box .colors .color-list {
+    padding: 10px 0;
+}
+
+.setting-box .option-box .colors .color-list li {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+.setting-box .option-box .colors .color-list li:hover {
+    width: 24px;
+    height: 24px;
+}
+
+.setting-box .option-box .colors .color-list li:last-child {
+    margin-right: 0px;
+}
+
+.setting-box .option-box .colors .color-list li:nth-child(1) {
+    background-color: var(--First-color);
+}
+
+.setting-box .option-box .colors .color-list li:nth-child(2) {
+    background-color: var(--second-color);
+}
+
+.setting-box .option-box .colors .color-list li:nth-child(3) {
+    background-color: var(--third-color);
+}
+
+.setting-box .option-box .colors .color-list li:nth-child(4) {
+    background-color: var(--fourth-color);
+}
+
+.setting-box .option-box .colors .color-list li:nth-child(5) {    
+    background-color: var(--fifth-color);
 }
