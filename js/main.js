@@ -27,7 +27,6 @@ $("#burgerBTN").click(function(){
 });
 
 
-
 // open & close setting box
 let setting_options_width = $(".setting-options").innerWidth() ;
 

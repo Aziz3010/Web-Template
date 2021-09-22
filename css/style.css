@@ -263,6 +263,11 @@ Header .container .ul-Links ul li a.actv {
 }
 
 /* option-box */
+.setting-box .option-box {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .setting-box .option-box h4 {
     margin: 0 0 .5rem 0;
     padding-left: 8px;
@@ -311,3 +316,26 @@ Header .container .ul-Links ul li a.actv {
 .setting-box .option-box .colors .color-list li:nth-child(5) {    
     background-color: var(--fifth-color);
 }
+
+.setting-box .option-box h6 {
+    color: #fff;
+    margin-bottom: .4rem;
+}
+
+.setting-box .option-box .randomBackg .yes,
+.setting-box .option-box .randomBackg .no {
+    cursor: pointer;
+    width: 45px;
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 0;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.setting-box .option-box .randomBackg span.active {
+    background-color: #000;
+}
+
