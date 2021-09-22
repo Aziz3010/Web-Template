@@ -1,19 +1,13 @@
+let randomBg = true;
+
+// background Interval
+let backgroundInterval;
+
 // Auto Change The Background For Landing Page.
 let landing_page = document.querySelector(".Landing-Page");
 
 // Array of background images
 let landing_page_imgs_arr = [1,2,3,4,5,6,7];
-
-// call func after 3s
-setInterval(function(){
-
-    // create random number
-    let randNumber = Math.floor(Math.random() * landing_page_imgs_arr.length);
-
-    // select img by randnumber
-    landing_page.style.backgroundImage = `url(../img/background-${ landing_page_imgs_arr[randNumber]}.jpg)`;
-
-} , 8000);
 
 // ////////////////////////////////////////
 
@@ -25,7 +19,6 @@ $("#burgerBTN").click(function(){
         $(".ul-Links").slideUp(1000);
     }
 });
-
 
 // open & close setting box
 let setting_options_width = $(".setting-options").innerWidth() ;
@@ -56,8 +49,6 @@ $(".setIconBox").click(function(){
 // Switch Colors
 const colorLi = document.querySelectorAll(".color-list li");
 
-// console.log();
-
 colorLi.forEach(li => {
 
     li.addEventListener("click",function(e){
@@ -67,18 +58,58 @@ colorLi.forEach(li => {
         // set color
         document.documentElement.style.setProperty('--main-color',colorRGB);
 
+        // remove all active class from all li
+        e.target.parentElement.querySelectorAll(".active").forEach(element => {
+            element.classList.remove("active");
+        });
+
+        // set active class on the current li
+        e.target.classList.add("active");
+
+
     })
 
 });
 
+// Switch random background
+const randomBackground = document.querySelectorAll(".randomBackg span");
+
+randomBackground.forEach(span => {
+
+    span.addEventListener("click",function(e){
+        // remove all active class from all span
+        e.target.parentElement.querySelectorAll(".active").forEach(element => {
+            element.classList.remove("active");
+        });
+
+        // set active class on the current span
+        e.target.classList.add("active");
 
 
+        if(e.target.dataset.backg == "yes") {
+            randomBg = true;
+            randomBgFunc();
+        } else {
+            randomBg = false;
+            clearInterval(backgroundInterval);
+        }
 
+    })
 
+});
 
+// run BG imgs
+function randomBgFunc() {
+    if(randomBg === true){
+        // call func after 4s
+        backgroundInterval = setInterval(function(){
 
+            // create random number
+            let randNumber = Math.floor(Math.random() * landing_page_imgs_arr.length);
 
+            // select img by randnumber
+            landing_page.style.backgroundImage = `url(../img/background-${ landing_page_imgs_arr[randNumber]}.jpg)`;
 
-
-
-
+        } , 4000);
+    }
+};
