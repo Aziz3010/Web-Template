@@ -16,10 +16,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* body {
-    background-color: green;
-} */
-
 ul {
     list-style: none;
     display: flex;
@@ -343,4 +339,34 @@ Header .container .ul-Links ul li a.actv {
 .setting-box .option-box .randomBackg span.active {
     opacity: 1;
 }
+
+/* About */
+#About {
+    padding: 5rem 0;
+}
+
+#About .row {
+    align-items: center;
+}
+
+#About .info-box h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+#About .info-box p {
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+
+#About .img-box img {
+    width: 100%;
+}
+
+
+
+
 
