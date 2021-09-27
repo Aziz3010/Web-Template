@@ -833,6 +833,23 @@ Header .container .ul-Links ul li a.actv {
     margin: 0;
 }
 
+@media screen and (max-width: 991px) {
+    #testimonial .container .testimonial-box {
+        flex-wrap: wrap;
+    }
+    
+    #testimonial .container .testimonial-box .ts-box {
+        width: calc(100% / 2);
+        margin: 0 0 .8rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #testimonial .container .testimonial-box .ts-box {
+        width: 100%;
+    }
+}
+
 /*  */
 
 
