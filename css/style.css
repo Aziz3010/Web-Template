@@ -737,4 +737,109 @@ Header .container .ul-Links ul li a.actv {
     }   
 }
 
+/* testimonial */
+
+#testimonial {
+    padding: 3rem 0rem 4rem 0rem;
+    position: relative;
+}
+
+#testimonial::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 0;
+}
+
+#testimonial::after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+    z-index: 0;
+}
+
+#testimonial .container {
+    position: relative;
+    z-index: 2;
+}
+
+#testimonial .container h2 {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#testimonial .container .testimonial-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonial .container .testimonial-box .ts-box {
+    background-color: #fff;
+    width: calc(98% / 3);
+    padding: 15px;
+    margin-right: 1%;
+    position: relative;
+    z-index: 2;
+}
+
+#testimonial .container .testimonial-box .ts-box:last-child {
+    margin-right: 0;
+}
+
+#testimonial .container .testimonial-box .ts-box>p {
+    line-height: 1.5;
+    font-size: 18px;
+    font-style: italic;
+    color: #999;
+}
+
+#testimonial .container .testimonial-box .ts-box .person-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#testimonial .container .testimonial-box .ts-box .person-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#testimonial .container .testimonial-box .ts-box .person-info .info {
+    width: calc(100% - 80px);
+}
+
+#testimonial .container .testimonial-box .ts-box .person-info .info h5 {
+    color: var(--main-color);
+    margin: 0;
+}
+
+#testimonial .container .testimonial-box .ts-box .person-info .info p {
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+}
+
 /*  */
+
+
+
+
+
+
+
+
+
