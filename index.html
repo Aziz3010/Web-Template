@@ -394,11 +394,37 @@
         </div>
     </section>
     <!-- End testimonial -->
-
-
-
-
-    
+    <!-- Start navBullets -->
+    <section id="nav-bullets">
+        <div class="bullet active" data-section="#Home">
+            <div class="tooltips">Home</div>
+        </div>
+        <div class="bullet" data-section="#About">
+            <div class="tooltips">About</div>
+        </div>
+        <div class="bullet" data-section="#our-skills">
+            <div class="tooltips">Skills</div>
+        </div>
+        <div class="bullet" data-section="#Gallery">
+            <div class="tooltips">Gallery</div>
+        </div>
+        <div class="bullet" data-section="#timeline">
+            <div class="tooltips">Timeline</div>
+        </div>
+        <div class="bullet" data-section="#features">
+            <div class="tooltips">Features</div>
+        </div>
+        <div class="bullet" data-section="#testimonial">
+            <div class="tooltips">Testimonial</div>
+        </div>
+        <div class="bullet" data-section="#Service">
+            <div class="tooltips">Service</div>
+        </div>
+        <div class="bullet" data-section="#Contacts">
+            <div class="tooltips">Contacts</div>
+        </div>
+    </section>
+    <!-- End navBullets -->
     <!-- Start Service -->
     <section id="Service">
 
@@ -406,7 +432,29 @@
     <!-- End Service -->
     <!-- Start Contacts -->
     <section id="Contacts">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2 class="head-title">Contact Us</h2>
+            <form action="Contact_handle.php" method="POST">
 
+                <div class="left">
+                    <input class="form-control" type="text" placeholder="Your Name" name="userName">
+                    <input class="form-control" type="text" placeholder="Your Phone" name="phone">
+                    <input class="form-control" type="email" placeholder="Your Email" name="email">
+                    <input class="form-control" type="text" placeholder="Subject" name="subject">
+                </div>
+
+                <div class="right">
+                    <textarea class="form-control" name="textarea" placeholder="Your Message" rows="6"></textarea>
+
+                    <div class="btn">
+                        <button class="btn" name="submit">Send</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
     </section>
     <!-- End Contacts -->
 

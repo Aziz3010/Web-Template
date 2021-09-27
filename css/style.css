@@ -386,13 +386,6 @@ Header .container .ul-Links ul li a.actv {
     height: 500px;
 }
 
-/* Contacts */
-#Contacts {
-    padding: 3rem 0;
-    background-color: brown;
-    height: 500px;
-}
-
 /* //////////////////////////// */
 
 /* our-skills */
@@ -850,13 +843,151 @@ Header .container .ul-Links ul li a.actv {
     }
 }
 
-/*  */
+/* nav bullets */
+#nav-bullets {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
 
+#nav-bullets .bullet {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    margin-bottom: .5rem;
+    cursor: pointer;
+    position: relative;
+}
 
+#nav-bullets .bullet:last-child {
+    margin-bottom: 0;
+}
 
+#nav-bullets .bullet.active {
+    background-color: var(--main-color);
+}
 
+#nav-bullets .bullet .tooltips {
+    background-color: var(--main-color);
+    width: 100px;
+    color: #fff;
+    padding: 4px 10px;
+    position: absolute;
+    right: 30px;
+    top: -9px;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+    cursor: default;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 800ms;
+}
 
+#nav-bullets .bullet .tooltips::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent var(--main-color);
+    border-width: 10px;
+    border-style: solid;
+}
 
+#nav-bullets .bullet:hover.bullet .tooltips {
+    opacity: 1;
+}
 
+/* Contacts */
+#Contacts {
+    padding: 3rem 0;
+    background-image: url(../img/518-5188738_world-map-with-flight-paths-hd-png-download.png);
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+}
 
+#Contacts .overlay {
+    background-color: rgba(255,255,255,.6);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+#Contacts .container {
+    position: relative;
+    z-index: 3;
+}
+
+#Contacts .container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#Contacts .container form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Contacts .container form .left {
+    width: calc(95% / 2);
+}
+
+#Contacts .container form .right {
+    width: calc(95% / 2);
+}
+
+#Contacts .container form .left input {
+    margin-bottom: 1.5rem;
+}
+
+#Contacts .container form .left input:last-child {
+    margin-bottom: 0rem;
+}
+
+#Contacts .container form .right textarea {
+    resize: none;
+}
+
+#Contacts .container form input:focus::-webkit-input-placeholder,
+#Contacts .container form textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 800ms;
+}
+
+#Contacts .container form .right .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .4rem;
+}
+
+#Contacts .container form .right .btn button {
+    width: 100px;
+    margin-left: auto;
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+#Contacts .container form .right .btn button:hover {
+    opacity: .9;
+}
+
+@media screen and (max-width: 576px) {
+    #Contacts .container form {
+        flex-direction: column;
+    }
+    #Contacts .container form .left {
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+    #Contacts .container form .right {
+        width: 80%;
+    }
+}
 

@@ -123,7 +123,6 @@ $("header .container .ul-Links li a").click(function(e){
 });
 
 // Select skills selector
-
 $(window).scroll(function(){
     // ourSkills offset
     let ourSkills_Offset_Top = $("#our-skills").offset().top;
@@ -236,7 +235,6 @@ document.addEventListener("click",function(e){
     }
 });
 
-
 // when scrolling the navbar-bg-color will change
 
 $(window).scroll(function(){
@@ -291,6 +289,29 @@ function changeColorHoverOnLink(){
     // actv anchur
     $("header .ul-Links ul li a.actv").css("color","#f69314")
 }
+
+// all bullets
+let allBullets = document.querySelectorAll("#nav-bullets .bullet");
+
+allBullets.forEach(bullet => {
+    bullet.addEventListener("click",function(e){
+        let currentSection = e.target.dataset.section;
+        let sectionOffset = $(`${currentSection}`).offset().top;
+        $("body , html").animate({scrollTop:sectionOffset},1500);
+    
+        allBullets.forEach(BLT => {
+            BLT.classList.remove("active");
+        })
+        bullet.classList.add("active");
+    });
+});
+
+
+
+
+
+
+
 
 
 
