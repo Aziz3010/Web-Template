@@ -11,6 +11,14 @@ let landing_page_imgs_arr = [1,2,3,4,5,6,7];
 
 // ////////////////////////////////////////
 
+// set color in local storage
+let colorInLocal = localStorage.getItem("colorSelected");
+
+if(localStorage.getItem("colorSelected") != null){
+    // set color
+    document.documentElement.style.setProperty('--main-color',colorInLocal);
+}
+
 // click on burger BTN to open & close the menu
 $("#burgerBTN").click(function(){
     if($(".ul-Links").offset().top == 0){
@@ -32,7 +40,6 @@ $(".setIconBox").click(function(){
         $(".setting-box").css("left",0);
         $(".setting-box").css("transition","1000ms");
     }
-
 });
 
 // autoClose setting-box
@@ -66,6 +73,9 @@ colorLi.forEach(li => {
         // set active class on the current li
         e.target.classList.add("active");
 
+
+        // set selected color in storage
+        localStorage.setItem("colorSelected",colorRGB);
 
     })
 
