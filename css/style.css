@@ -377,17 +377,6 @@ Header .container .ul-Links ul li a.actv {
     }
 }
 
-/* //////////////////////////// */
-
-/* Service */
-#Service {
-    padding: 3rem 0;
-    background-color: aquamarine;
-    height: 500px;
-}
-
-/* //////////////////////////// */
-
 /* our-skills */
 #our-skills {
     background-color: #eee;
@@ -903,7 +892,7 @@ Header .container .ul-Links ul li a.actv {
 
 /* Contacts */
 #Contacts {
-    padding: 3rem 0;
+    padding: 4rem 0;
     background-image: url(../img/518-5188738_world-map-with-flight-paths-hd-png-download.png);
     background-size: 100% 100%;
     position: relative;
@@ -959,22 +948,22 @@ Header .container .ul-Links ul li a.actv {
     transition: opacity 800ms;
 }
 
-#Contacts .container form .right .btn {
+#Contacts .container form .right #btn {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: .4rem;
+    margin-top: 1.6rem;
+    padding: 0;
 }
 
-#Contacts .container form .right .btn button {
-    width: 100px;
-    margin-left: auto;
+#Contacts .container form .right #btn button {
+    width: 100%;
     color: #fff;
     background-color: var(--main-color);
 }
 
-#Contacts .container form .right .btn button:hover {
+#Contacts .container form .right #btn button:hover {
     opacity: .9;
 }
 
@@ -989,5 +978,49 @@ Header .container .ul-Links ul li a.actv {
     #Contacts .container form .right {
         width: 80%;
     }
+    #Contacts .container form .right #btn {
+        margin-top: 1rem;
+    }
 }
 
+/* footer */
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: #333;
+}
+
+footer h6 {
+    margin: 0;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+footer h6 i {
+    color: #fff;
+    animation-name: heart;
+    animation-duration: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    0% {
+        font-size: 100%;
+        color: #fff;    }
+    25% {
+        font-size: 85%;
+        color: rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        font-size: 100%;
+        color: red;
+    }
+    75% {
+        font-size: 85%;
+        color: rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        font-size: 100%;
+        color: #fff;
+    }
+}
